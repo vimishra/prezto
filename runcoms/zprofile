@@ -17,8 +17,11 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+# Configure emacs
+export EMACS_PLUGIN_LAUNCHER="${HOME}/tools/bin/emacsclient.sh"
+# set EDITOR if not already defined.
+export EDITOR="${EMACS_PLUGIN_LAUNCHER}"
+export VISUAL="${EMACS_PLUGIN_LAUNCHER}"
 export PAGER='less'
 
 #

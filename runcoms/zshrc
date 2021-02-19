@@ -11,3 +11,32 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/vikasmis/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/vikasmis/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/vikasmis/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/vikasmis/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# Prompt
+prompt pure
+
+
+alias emacs="$EMACS_PLUGIN_LAUNCHER --no-wait"
+alias e=emacs
+# open terminal emacsclient
+alias te="$EMACS_PLUGIN_LAUNCHER -nw"
+# same than M-x eval but from outside Emacs.
+alias eeval="$EMACS_PLUGIN_LAUNCHER --eval"
+# create a new X frame
+alias eframe='emacsclient --alternate-editor "" --create-frame'
