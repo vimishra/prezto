@@ -38,7 +38,15 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
-  'prompt'
+  'prompt' \
+  'history-substring-search' \
+  'python' \
+  'conda-zsh-completion' \
+  'fasd' \
+  'git' \
+  'fzf' \
+
+
 
 #
 # Autosuggestions
@@ -87,13 +95,13 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 #
 
 # Set the query found color.
-# zstyle ':prezto:module:history-substring-search:color' found ''
+zstyle ':prezto:module:history-substring-search:color' found ''
 
 # Set the query not found color.
-# zstyle ':prezto:module:history-substring-search:color' not-found ''
+zstyle ':prezto:module:history-substring-search:color' not-found ''
 
 # Set the search globbing flags.
-# zstyle ':prezto:module:history-substring-search' globbing-flags ''
+zstyle ':prezto:module:history-substring-search' globbing-flags ''
 
 #
 # macOS
@@ -101,6 +109,13 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Set the keyword used by `mand` to open man pages in Dash.app
 # zstyle ':prezto:module:osx:man' dash-keyword 'manpages'
+
+# Python
+# Disable virtualenvwrapper
+zstyle ':prezto:module:python' skip-virtualenvwrapper-init 'on'
+# Enable anaconda
+zstyle ':prezto:module:python' conda-init 'on'
+
 
 #
 # Pacman
@@ -220,6 +235,22 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 #
 # Utility
 #
+
+# FZF
+# Use keybindings
+zstyle ':prezto:module:fzf' key-bindings 'yes'
+
+# Use completion
+zstyle ':prezto:module:fzf' completion 'yes'
+
+# Set height of the fzf results (comment for full screen)
+zstyle ':prezto:module:fzf' height '30%'
+# Set colorscheme
+# A list of available colorschemes is available in color.zsh
+# To add more color schemes of your own, consult
+# https://github.com/junegunn/fzf/wiki/Color-schemes and add values to the
+# color.zsh file accordingly
+zstyle ':prezto:module:fzf' colorscheme 'One Dark'
 
 # Enabled safe options. This aliases cp, ln, mv and rm so that they prompt
 # before deleting or overwriting files. Set to 'no' to disable this safer
