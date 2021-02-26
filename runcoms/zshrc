@@ -39,6 +39,7 @@ alias eframe='emacsclient --alternate-editor "" --create-frame'
 # Set the prompt
 # prompt sorin
 eval "$(starship init zsh)"
+export RPROMPT=''
 
 # Custom aliases
 # A few aliases for exa, a ls replacement
@@ -89,6 +90,16 @@ function proxyoff(){
 
 # Jupyter Notebook remote
 alias port_forward='nohup ssh -N -f -L localhost:8890:localhost:8890 vikasm@192.168.1.225'
-alias remote_notebook_start_tf='nohup ssh -f vikasm@192.168.1.225 ". /home/vikasm/anaconda3/etc/profile.d/conda.sh; conda activate tensorflow; jup
-alias remote_notebook_start_torch='nohup ssh -f vikasm@192.168.1.225 ". /home/vikasm/anaconda3/etc/profile.d/conda.sh; conda activate torch; jupyt
+alias remote_notebook_start_tf='nohup ssh -f vikasm@192.168.1.225 ". /home/vikasm/anaconda3/etc/profile.d/conda.sh; conda activate tensorflow; jupyter lab --no-browser --port=8890"; port_forward'
+alias remote_notebook_start_torch='nohup ssh -f vikasm@192.168.1.225 ". /home/vikasm/anaconda3/etc/profile.d/conda.sh; conda activate torch; jupyter lab --no-browser --port=8890"; port_forward'
 alias remote_notebook_stop='ssh vikasm@192.168.1.225 "pkill -u vikasm jupyter"'
+
+# My Fasd aliases
+alias a='fasd -a'        # any
+alias s='fasd -si'       # show / search / select
+alias d='fasd -d'        # directory
+alias f='fasd -f'        # file
+alias sd='fasd -sid'     # interactive directory selection
+alias sf='fasd -sif'     # interactive file selection
+alias z='fasd_cd -d'     # cd, same functionality as j in autojump
+alias zz='fasd_cd -d -i' # cd with interactive selection
