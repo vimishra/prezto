@@ -30,31 +30,33 @@ zstyle ':prezto:*:*' color 'yes'
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
-  'python' \
-  'conda-zsh-completion' \
-  'environment' \
-  'terminal' \
-  'editor' \
-  'history' \
-  'directory' \
-  'spectrum' \
-  'utility' \
-  'completion' \
-  'prompt' \
-  'history-substring-search' \
-  'fasd' \
-  'git' \
-  'fzf' \
-  'osx' \
-
-
+       'environment' \
+       'terminal' \
+       'python' \
+       'conda-zsh-completion' \
+       'editor' \
+       'history' \
+       'directory' \
+       'spectrum' \
+       'utility' \
+       'completion' \
+       'prompt' \
+       'history-substring-search' \
+       'autosuggestions' \
+       'homebrew' \
+       'fasd' \
+       'git' \
+       'fzf' \
+       'osx' \
+       'syntax-highlighting'
 
 #
 # Autosuggestions
 #
 
 # Set the query found color.
-# zstyle ':prezto:module:autosuggestions:color' found ''
+zstyle ':prezto:module:autosuggestions' color 'yes'
+zstyle ':prezto:module:autosuggestions:color' found 'fg=#444444'
 
 #
 # Completions
@@ -62,7 +64,7 @@ zstyle ':prezto:load' pmodule \
 
 # Set the entries to ignore in static */etc/hosts* for host completion.
 # zstyle ':prezto:module:completion:*:hosts' etc-host-ignores \
-#   '0.0.0.0' '127.0.0.1'
+  #   '0.0.0.0' '127.0.0.1'
 
 #
 # Editor
@@ -156,23 +158,23 @@ zstyle ':prezto:module:python' conda-init 'on'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
-# zstyle ':prezto:module:syntax-highlighting' highlighters \
-#   'main' \
-#   'brackets' \
-#   'pattern' \
-#   'line' \
-#   'cursor' \
-#   'root'
+ zstyle ':prezto:module:syntax-highlighting' highlighters \
+     'main' \
+     'brackets' \
+     'pattern' \
+     'line' \
+     'cursor' \
+     'root'
 #
 # Set syntax highlighting styles.
 # zstyle ':prezto:module:syntax-highlighting' styles \
-#   'builtin' 'bg=blue' \
-#   'command' 'bg=blue' \
-#   'function' 'bg=blue'
+  #   'builtin' 'bg=blue' \
+  #   'command' 'bg=blue' \
+  #   'function' 'bg=blue'
 #
 # Set syntax pattern styles.
 # zstyle ':prezto:module:syntax-highlighting' pattern \
-#   'rm*-rf*' 'fg=white,bold,bg=red'
+  #   'rm*-rf*' 'fg=white,bold,bg=red'
 
 #
 # Terminal
