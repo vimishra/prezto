@@ -23,7 +23,7 @@ alias eframe='emacsclient --alternate-editor "" --create-frame'
 # Set the prompt
 # prompt sorin
 eval "$(starship init zsh)"
-export RPROMPT=''
+# export RPROMPT=''
 
 # Custom aliases
 # A few aliases for exa, a ls replacement
@@ -110,4 +110,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
