@@ -110,3 +110,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
+# Local Variables:
+# mode: sh
+# End:

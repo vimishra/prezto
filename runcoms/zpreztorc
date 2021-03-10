@@ -48,7 +48,7 @@ zstyle ':prezto:load' pmodule \
        'git' \
        'fzf' \
        'osx' \
-       'syntax-highlighting'
+       'fast-syntax-highlighting'
 
 #
 # Autosuggestions
