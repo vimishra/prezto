@@ -33,10 +33,10 @@ alias ll="exa --sort Name --long --classify"
 alias la="exa --sort Name --long --classify --all"
 alias lr="exa --sort Name --long --classify --recurse"
 alias lra="exa --sort Name --long --classify --recurse --all"
-alias lt="exa --sort Name --long --tree --classify"
+alias lt="exa --sort Name --long --classify"
 alias lta="exa --sort Name --long --tree --all --classify"
 alias ls="exa --sort Name --classify"
-alias lrt="exa --long -snew"
+alias lrt="exa --long -snew --classify"
 
 # Other common aliases
 alias cat='bat'
